@@ -78,6 +78,9 @@ def transcribe_audio():
 
 
 def remove_cov_file():
+    """
+    Delete cov_audio.m4a file after transcribe
+    """
     if(is_video_file()):
         try:
             os.remove(cov_audio_file_path)
