@@ -1,4 +1,4 @@
-Video to Audio Transcription using OpenAI-Whisper
+Speech-to-text conversion using OpenAI-Whisper
 =================================================
 
 Description:
@@ -53,9 +53,9 @@ Usage:
 2. **Run the Script:**
    - Execute the script in your terminal or command prompt:
      ```
-     python <script_name>.py
+     python main.py
      ```
-     Replace `<script_name>.py` with the actual file name of the script.
+     Replace `main.py` with the actual file name of the script.
 
 3. **Output:**
    - If the file is detected as a video, it will be converted to an audio file.
@@ -76,10 +76,6 @@ Customization:
   
 • **Output Format:**
   - The transcription segments are formatted as `[HH:MM:SS] text`. Feel free to modify the time or text formatting to better suit your needs.
-
-License:
----------
-This script is provided for educational and demonstration purposes. You are free to modify and use it according to your needs.
 
 Support:
 ---------
