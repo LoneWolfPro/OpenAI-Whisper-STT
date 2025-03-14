@@ -75,6 +75,16 @@ def transcribe_audio():
         result.append(f"[{time}] {text}")
     output = "\n".join(result)
     print(output)
+    write_file(output)
+
+
+def write_file(output):
+    try:
+        with open("output.txt", "w") as file:
+            file.writelines(output)
+            print("File written successfully.")
+    except IOError as e:
+        print(f"An error occurred while writing to the file: {e}")
 
 
 def remove_cov_file():
