@@ -10,7 +10,8 @@ Features:
 • **Media File Detection:** Determines whether the given file is a video by inspecting its MIME type.
 • **Video-to-Audio Conversion:** Uses FFmpeg to convert video files (e.g., .mp4) to an audio format (.m4a) while preserving the original audio codec.
 • **Speech-to-Text Transcription:** Utilizes the OpenAI-Whisper model (using the “turbo” variant by default) to convert spoken words into text. It also checks for CUDA-enabled GPUs (if available) to accelerate performance.
-• **Timestamped Output:** Formats and prints the transcription with corresponding timestamps in the format HH:MM:SS.
+• **Hardware Acceleration:** Detects CUDA-enabled GPUs via PyTorch; if available, transcription runs on the GPU.
+• **Timestamped Output:** Formats and outputs the transcription with corresponding timestamps in HH:MM:SS format to output.txt file.
 • **Cleanup:** Deletes the temporary audio file after transcription if a conversion was performed.
 
 Prerequisites:
@@ -59,7 +60,7 @@ Usage:
 
 3. **Output:**
    - If the file is detected as a video, it will be converted to an audio file.
-   - The Whisper model then transcribes the audio, and you will see segmented transcription output with timestamps printed in your console.
+   - The Whisper model then transcribes the audio, and you will see segmented transcription output with timestamps outputted in your console and output.txt file.
    - Any temporary files created during conversion will be deleted after transcription.
 
 Troubleshooting:
