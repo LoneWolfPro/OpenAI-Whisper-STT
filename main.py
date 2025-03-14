@@ -1,4 +1,4 @@
-﻿import mimetypes
+import mimetypes
 import os
 import subprocess
 import torch
@@ -91,7 +91,7 @@ def remove_cov_file():
     """
     Delete cov_audio.m4a file after transcribe
     """
-    if(is_video_file()):
+    if is_video_file():
         try:
             os.remove(cov_audio_file_path)
             print(f"File {cov_audio_file_path} deleted successfully")
@@ -103,14 +103,13 @@ def remove_cov_file():
             print(f"Error: {e}")
 
 
-
 def main():
     video_to_audio()
     transcribe_audio()
     remove_cov_file()
 
 
-file_path = r"test_video.mp4" # File to be identified
+file_path = r"test_video.mp4"  # File to be identified
 audio_file_path = r""
 cov_audio_file_path = r"cov_audio.m4a"
 main()
